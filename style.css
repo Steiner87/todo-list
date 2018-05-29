@@ -1,0 +1,72 @@
+form {
+    width: 200px;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #e2e2e2;
+    border-top: 1px solid #e2e2e2;
+    border-radius: 4px;
+}
+
+.title {
+    padding: 10px 0;
+    background-image: linear-gradient(to top, #e0e0e0 30%, white 90%);
+}
+
+h3 {
+    color: #5f5f5f;
+    padding-left: 20px;
+    margin: 0;
+}
+
+form input {
+    display: none;
+}
+
+div {
+    padding: 20px 10px;
+}
+
+label {
+    padding-left: 40px;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    color: #818181;
+}
+
+label::after {
+    content: "";
+    top: 0px;
+    left: 13px;
+    position: absolute;
+    height: 10px;
+    width: 13px;
+    border-left: 4px solid green;
+    border-bottom: 4px solid green;
+    transform: rotate(-40deg);
+    display: none;
+}
+
+label::before {
+    content: "";
+    top: -2px;
+    left: 10px;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #818181;
+    border-radius: 50%;
+}
+
+input:checked~label::before {
+    border: 2px solid green;
+}
+
+input:checked~label::after {
+    display: block;
+}
+
+input:checked~label {
+    text-decoration: line-through;
+    color: green;
+}
